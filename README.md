@@ -21,7 +21,7 @@ Pour l'installer : `npm install -g node-inspector`.
 Ensuite, après avoir lancé le serveur, lancer Node Inspector de cette manière : `node-inspector`. Et pour déboguer le serveur : http://localhost:8080/debug/port=5858
 
 ## Exécution des tests
-`mocha tests/test.js` permet d'exécuter les suites de tests déclarées dans le fichier test.js.
+`mocha tests/ws.js` permet d'exécuter les suites de tests déclarées dans le fichier test.js.
 
 Les tests peuvent être réexécutés à la sauvegarde grâce à la ligne de commande suivante :
 `nodemon node_modules/mocha/bin/mocha tests/ws.js`
