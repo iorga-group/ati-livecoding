@@ -2,6 +2,9 @@
 	"name": "iorga-livecoding",
 	"version": "0.0.1",
 	"dependencies": {
-		"express": "~3.4.3"
+		"express": "~3.4.3",
+                "mocha": "~1.14.0",
+                "superagent": "~0.15.7",
+                "expect.js": "~0.2.0"
 	}
 }
