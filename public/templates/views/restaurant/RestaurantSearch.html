@@ -1,0 +1,13 @@
+<div class="row">
+	<form class="col-md-6">
+		<div class="form-group">
+			<label for="nomFilter">Nom du restaurant :</label>
+			<input id="nomFilter" type="text" class="form-control" ng-model="nomFilter" />
+		</div>
+	</form>
+</div>
+<ul class="list-group">
+	<li class="list-group-item" ng-repeat="restaurant in restaurants | filter:nomFilter">
+		{{restaurant.nom}}
+	</li>
+</ul>
