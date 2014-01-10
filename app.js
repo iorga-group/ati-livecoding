@@ -1,6 +1,6 @@
 var express = require('express'),
 	path = require('path'),
-        restaurantWS = require('./server/ws/RestaurantWS');
+	restaurantWS = require('./server/ws/RestaurantWS');
 
 var app = express();
 

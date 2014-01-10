@@ -1,13 +1,18 @@
 <div class="row">
 	<form class="col-md-6">
-		<div class="form-group">
+		<div class="input-form">
 			<label for="nomFilter">Nom du restaurant :</label>
-			<input id="nomFilter" type="text" class="form-control" ng-model="nomFilter" />
+			<div class="input-group">
+				<input id="restaurantNom" type="text" class="form-control" ng-model="restaurantNom" />
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" ng-click="createRestaurant()">Créer</button>
+				</span>
+			</div>
 		</div>
 	</form>
 </div>
 <ul class="list-group">
-	<li class="list-group-item" ng-repeat="restaurant in restaurants | filter:nomFilter">
+	<li class="list-group-item" ng-repeat="restaurant in restaurants | filter:restaurantNom">
 		{{restaurant.nom}}
 	</li>
 </ul>

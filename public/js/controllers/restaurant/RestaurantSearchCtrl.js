@@ -6,9 +6,20 @@ angular.module('livecoding')
 //		                      {nom: 'Restaurant 2'}
 //		                  ];
 		
+		$scope.createRestaurant = function() {
+			$http.post('api/v1/restaurants', {nom: $scope.restaurantNom}).success(function() {
+				$scope.refreshRestaurants();
+			});
+		}
+		
+		
+		$scope.refreshRestaurants = function() {
+			$http.get('api/v1/restaurants').success(function (data, status, headers, config) {
+				$scope.restaurants = data;
+			});
+		}
+		
 		// init
-		$http.get('api/v1/restaurants').success(function (data, status, headers, config) {
-			$scope.restaurants = data;
-		});
+		$scope.refreshRestaurants();
 	})
 ;

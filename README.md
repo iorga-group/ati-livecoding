@@ -9,6 +9,8 @@ Pour lancer le serveur : `node app.js`
 
 Dès lors, on peut accéder à l'application à l'adresse http://localhost:3000/
 
+N'oubliez pas de lancer MongoDB avec : `./mongod --dbpath /dev/shm/mongodb`
+
 ## Développer ou déboguer
 `nodemon --debug app.js` : permet de lancer le serveur, mais va en plus le killer et le relancer dès que l'on modifie un fichier dans les sources.
 
@@ -25,3 +27,4 @@ Ensuite, après avoir lancé le serveur, lancer Node Inspector de cette manière
 
 Les tests peuvent être réexécutés à la sauvegarde grâce à la ligne de commande suivante :
 `nodemon node_modules/mocha/bin/mocha tests/ws.js`
+
